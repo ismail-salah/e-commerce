@@ -1,0 +1,246 @@
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .big-con{
+        margin: auto;
+        min-height: 100vh; 
+        background-color: #e8fde8;
+    }
+    
+    .con{
+        width: 96%;
+        margin: auto;
+    }
+    .container {
+    
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    #products {
+        display: flex;
+        flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 70%;
+    }
+
+    .product {
+      width: 40%;
+      margin: 0px 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(27, 218, 10, 0.5);
+      border-radius: 5px;
+      max-height: 310px;
+      min-height: 310px;
+      overflow: hidden;
+    }
+
+
+
+  
+    .product img {
+      width: 100%;
+      max-height: 165px;
+      min-height: 165px;
+
+    }
+  
+  
+    .product-info {
+      padding: 10px;
+    }
+  
+    .product-name {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    .product-price {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .add-to-cart {
+      display: block;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  
+    .add-to-cart:hover {
+      background-color: #3E8E41;
+    }
+  
+    .sidebar {
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #b0e2a3;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .sidebar div {
+      margin-bottom: 20px;
+    }
+  
+    #cart {
+        width: 30%;
+        height: auto;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #cart li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    #cart li img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+  
+    #cart li span {
+      font-size: 16px;
+    }
+    .my-cart{}
+  
+    #cart li button {
+      background-color: #48915a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  
+   
+  
+    .cart-item-count {
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  
+    #item-count {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+
+#loading
+{
+    z-index: 999999999;
+    display: flex;
+    color:#0aad0a
+}
+
+/* <div class="container">
+<div id="products2">
+  <div class="product" data-name="Product 77" data-price="10.99" data-img="product1.jpg">
+    <img src="product1.jpg" alt="Product 77">
+    <div class="product-info">
+      <span class="product-name">Product 1</span>
+      <span class="product-price">$10.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="product" data-name="Product 3" data-price="10.99" data-img="product3.jpg">
+    <img src="product1.jpg" alt="Product 3">
+    <div class="product-info">
+      <span class="product-name">Product 3</span>
+      <span class="product-price">$10.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product" data-name="Product 2" data-price="15.99" data-img="product2.jpg">
+    <img src="product2.jpg" alt="Product 2">
+    <div class="product-info">
+      <span class="product-name">Product 2</span>
+      <span class="product-price">$15.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+
+</div>
+
+</div> */
